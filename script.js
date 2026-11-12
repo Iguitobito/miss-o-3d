@@ -4,122 +4,124 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntas = 
-   [
+const perguntas = [
     {
-        enunciado: "Ao ligar a televisão no noticiário da noite, você vê uma notícia urgente: a agência espacial internacional abriu inscrições para civis participarem da primeira missão de colonização de Marte. Qual o seu primeiro pensamento?",
+        enunciado: "Ao voltar para casa da escola, você encontra um filhote de cachorro abandonado na rua, assustado e na chuva.",
         alternativas: [
             {
-                texto: "Isso é loucura, é perigoso demais para nós!",
-                afirmacao: [
-                    "Você sente receio diante dos riscos desconhecidos de explorar outro planeta.",
-                    "Sua prioridade inicial é garantir a segurança e estabilidade no ambiente terrestre."
-                ],
+                texto: "Resgatar o cachorro e mantê-lo em segurança.",
+                afirmacao: "Preciso encontrar uma forma de resgatá-lo e mantê-lo em segurança."
             },
             {
-                texto: "Isso é fascinante, eu preciso me inscrever!",
-                afirmacao: [
-                    "Seu espírito aventureiro e curiosidade pelo desconhecido o impulsionam imediatamente.",
-                    "Você enxerga a colonização espacial como uma oportunidade única para a história humana."
-                ],
+                texto: "Procurar o dono do cachorro.",
+                afirmacao: "Vou procurar por perto e ver se o dono dele não está procurando por ele."
             }
         ]
     },
+
     {
-        enunciado: "Após passar nas primeiras fases de seleção, você entra em um programa de treinamento intensivo. Em uma das oficinas de engenharia aeroespacial, o instrutor pede que vocês projetem um sistema de suporte à vida para a base marciana. Como você decide proceder?",
+        enunciado: "Sua escola decide criar um projeto comunitário sobre causa animal. O professor pede para a turma escolher a primeira ação.",
         alternativas: [
             {
-                texto: "Utilizar simuladores avançados e algoritmos de IA para projetar um ecossistema fechado de alta eficiência que recicle todos os recursos.",
-                afirmacao: [
-                    "Você prefere confiar na tecnologia de ponta e na automação para resolver problemas complexos.",
-                    "Sua abordagem foca no aproveitamento máximo de dados e otimização computacional."
-                ],
+                texto: "Arrecadar ração e medicamentos.",
+                afirmacao: "Organizar uma campanha de arrecadação de ração e medicamentos para ONGs locais."
             },
             {
-                texto: "Pesquisar manuais clássicos de arquitetura de submarinos, conversar com colegas e adaptar ideias tradicionais com base em conhecimentos próprios.",
-                afirmacao: [
-                    "Você valoriza a cooperação humana e soluções já testadas pelo tempo.",
-                    "Sua metodologia prioriza o raciocínio prático e a adaptação de conceitos consagrados."
-                ],
+                texto: "Criar uma feira de conscientização.",
+                afirmacao: "Criar uma feira de conscientização sobre adoção responsável e castração."
             }
         ]
     },
+
     {
-        enunciado: "Durante o debriefing do treinamento, a equipe realiza um grande debate sobre o futuro da exploração espacial. Um ponto central é levantado: a colonização de Marte desvia recursos essenciais que deveriam ser usados para salvar a Terra. No debate, como você se posiciona?",
+        enunciado: "Durante o projeto, surge um debate na sala sobre a melhor maneira de combater o abandono de animais nas ruas.",
         alternativas: [
             {
-                texto: "Defendo que devemos concentrar todos os nossos esforços e dinheiro em resolver as crises climáticas e ambientais da Terra antes de pensar em outros planetas.",
-                afirmacao: [
-                    "Sua visão prioriza os problemas imediatos do nosso planeta natal.",
-                    "Você acredita que a preservação da Terra deve ser o foco financeiro e ético absoluto."
-                ],
+                texto: "Defender políticas públicas.",
+                afirmacao: "Defender políticas públicas severas de punição a maus-tratos e incentivo à castração gratuita."
             },
             {
-                texto: "Argumento que a tecnologia desenvolvida para Marte pode ser aplicada na Terra e que expandir nossa presença para o espaço garante a sobrevivência da humanidade a longo prazo.",
-                afirmacao: [
-                    "Você enxerga a exploração espacial como um motor de inovação tecnológica para o bem comum.",
-                    "Sua perspectiva pensa no futuro distante e no plano de contingência para a humanidade."
-                ],
+                texto: "Apoiar lares temporários e feiras de adoção.",
+                afirmacao: "Incentivar programas voluntários de apoio a lares temporários e feiras de adoção."
             }
         ]
     },
+
     {
-        enunciado: "Como parte da documentação da missão, cada cadete precisa criar um pôster conceitual que represente a futura cidade humana em Marte. E agora?",
+        enunciado: "Para divulgar a campanha do abrigo local, você precisa criar um material visual de divulgação.",
         alternativas: [
             {
-                texto: "Criar o desenho manualmente usando ferramentas digitais básicas de ilustração, focando na sua própria expressão artística.",
-                afirmacao: [
-                    "Você prefere imprimir sua identidade pessoal e visão artística diretamente no trabalho.",
-                    "Sua escolha reflete apreço pelo processo criativo autoral e artesanal."
-                ],
+                texto: "Produzir cartazes e usar fotos reais.",
+                afirmacao: "Produzir cartazes manuais e fotos reais dos animais do abrigo para gerar conexão."
             },
             {
-                texto: "Utilizar um gerador de imagens avançado para criar uma representação fotorrealista hiperdetalhada da colônia marciana.",
-                afirmacao: [
-                    "Você aproveita o potencial das ferramentas gerativas para alcançar um alto nível de detalhamento visual.",
-                    "Sua abordagem foca em entregar um resultado impactante e fotorrealista com eficiência."
-                ],
+                texto: "Criar artes digitais.",
+                afirmacao: "Criar artes digitais explicativas com dicas de como a comunidade pode ajudar."
+            }
+        ]
+    },
+
+    {
+        enunciado: "Um amigo quer comprar um filhote de raça em um canil, mas você sabe que existem diversos animais precisando de um lar nos abrigos da cidade.",
+        alternativas: [
+            {
+                texto: "Convidá-lo para visitar um abrigo.",
+                afirmacao: "Convidá-lo para visitar um abrigo antes de decidir, mostrando a importância da adoção."
+            },
+            {
+                texto: "Orientá-lo sobre canis responsáveis.",
+                afirmacao: "Orientá-lo sobre como verificar se o canil é ético e respeita o bem-estar dos animais."
             }
         ]
     }
-]
+];
 
-
-let atual = 0; 
+let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
-    if(atual >= perguntas.length){
+    if (atual >= perguntas.length) {
         mostraResultado();
         return;
     }
+
     perguntaAtual = perguntas[atual];
+
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
+    caixaAlternativas.innerHTML = "";
+
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas){
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
+
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+
+        botaoAlternativas.addEventListener("click", () => {
+            respostaSelecionada(alternativa);
+        });
+
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+function respostaSelecionada(opcaoSelecionada) {
+    historiaFinal += opcaoSelecionada.afirmacao + " ";
+
     atual++;
+
     mostraPergunta();
 }
 
-function mostraResultado(){
-    caixaPerguntas.textContent = "Em 2049...";
+function mostraResultado() {
+    caixaPerguntas.textContent = "O seu impacto na causa animal:";
+
     textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = ""; 
+
+    caixaAlternativas.innerHTML = "";
 }
 
 mostraPergunta();
